@@ -2,8 +2,18 @@ name: Deploy Vite App
 on:
   push:
     branches: [main]
+
+# 核心修改：添加以下权限配置
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
