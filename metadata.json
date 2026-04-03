@@ -1,0 +1,6 @@
+{
+  "name": "Geometric Pattern Generator",
+  "description": "Generate random geometric slat patterns and export as SVG.",
+  "requestFramePermissions": []
+}
+
